@@ -9,34 +9,61 @@ import test.akhilesh.tree.node.TreeNode;
 public class TreeTraversel {
 
 	public static <E> void preOrderTraversel(TreeNode<E> root) {
+		System.out.println("preOrderTraversel  :");
+		preOrderTraverse(root);
+		System.out.println();
+	}
+
+	private static <E> void preOrderTraverse(TreeNode<E> root) {
 		if (root == null)
 			return;
 
 		System.out.print(root.getData() + "  ");
-		preOrderTraversel(root.getLeftChild());
-		preOrderTraversel(root.getRightChild());
+		preOrderTraverse(root.getLeftChild());
+		preOrderTraverse(root.getRightChild());
 
 	}
 
 	public static <E> void inOrderTraversel(TreeNode<E> root) {
+		System.out.println("inOrderTraversel :");
+		inOrderTraverse(root);
+		System.out.println();
+
+	}
+
+	private static <E> void inOrderTraverse(TreeNode<E> root) {
 		if (root == null)
 			return;
-		inOrderTraversel(root.getLeftChild());
+		inOrderTraverse(root.getLeftChild());
 		System.out.print(root.getData() + "  ");
-		inOrderTraversel(root.getRightChild());
+		inOrderTraverse(root.getRightChild());
 
 	}
 
 	public static <E> void postOrderTraversel(TreeNode<E> root) {
+		System.out.println("postOrderTraversel :");
+		postOrderTraverse(root);
+		System.out.println();
+
+	}
+
+	private static <E> void postOrderTraverse(TreeNode<E> root) {
 		if (root == null)
 			return;
-		postOrderTraversel(root.getLeftChild());
-		postOrderTraversel(root.getRightChild());
+		postOrderTraverse(root.getLeftChild());
+		postOrderTraverse(root.getRightChild());
 		System.out.print(root.getData() + "  ");
 
 	}
 
 	public static <E> void levelOrderTraversel(TreeNode<E> root) {
+		System.out.println("levelOrderTraversel :");
+		levelOrderTraverse(root);
+		System.out.println();
+
+	}
+
+	private static <E> void levelOrderTraverse(TreeNode<E> root) {
 		Queue<TreeNode<E>> queue = new LinkedList<TreeNode<E>>();
 		queue.add(root);
 		while (!queue.isEmpty()) {
@@ -50,19 +77,21 @@ public class TreeTraversel {
 	}
 
 	public static <E> void inorderTraverselWithoutRecursion(TreeNode<E> root) {
+		System.out.println("inorderTraverselWithoutRecursion :");
 		if (root == null)
 			return;
 		Stack<TreeNode<E>> stack = new Stack<TreeNode<E>>();
 		TreeNode<E> temp = root;
 		pushAllLeftToStack(stack, temp);
 		while (!stack.isEmpty()) {
-			temp=stack.pop();
-			System.out.print(temp.getData()+"  ");
-			if(temp.getRightChild()!=null){
-				temp=temp.getRightChild();
+			temp = stack.pop();
+			System.out.print(temp.getData() + "  ");
+			if (temp.getRightChild() != null) {
+				temp = temp.getRightChild();
 				pushAllLeftToStack(stack, temp);
 			}
 		}
+		System.out.println();
 	}
 
 	private static <E> void pushAllLeftToStack(Stack<TreeNode<E>> stack, TreeNode<E> temp) {
