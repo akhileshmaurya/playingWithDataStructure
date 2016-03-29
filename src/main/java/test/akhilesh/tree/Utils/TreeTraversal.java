@@ -6,10 +6,10 @@ import java.util.Stack;
 
 import test.akhilesh.tree.node.TreeNode;
 
-public class TreeTraversel {
+public class TreeTraversal {
 
-	public static <E> void preOrderTraversel(TreeNode<E> root) {
-		System.out.println("preOrderTraversel  :");
+	public static <E> void preOrderTraversal(TreeNode<E> root) {
+		System.out.println("preOrderTraversal  :");
 		preOrderTraverse(root);
 		System.out.println();
 	}
@@ -24,8 +24,8 @@ public class TreeTraversel {
 
 	}
 
-	public static <E> void inOrderTraversel(TreeNode<E> root) {
-		System.out.println("inOrderTraversel :");
+	public static <E> void inOrderTraversal(TreeNode<E> root) {
+		System.out.println("inOrderTraversal :");
 		inOrderTraverse(root);
 		System.out.println();
 
@@ -40,8 +40,8 @@ public class TreeTraversel {
 
 	}
 
-	public static <E> void postOrderTraversel(TreeNode<E> root) {
-		System.out.println("postOrderTraversel :");
+	public static <E> void postOrderTraversal(TreeNode<E> root) {
+		System.out.println("postOrderTraversal :");
 		postOrderTraverse(root);
 		System.out.println();
 
@@ -56,8 +56,8 @@ public class TreeTraversel {
 
 	}
 
-	public static <E> void levelOrderTraversel(TreeNode<E> root) {
-		System.out.println("levelOrderTraversel :");
+	public static <E> void levelOrderTraversal(TreeNode<E> root) {
+		System.out.println("levelOrderTraversal :");
 		levelOrderTraverse(root);
 		System.out.println();
 
@@ -76,8 +76,8 @@ public class TreeTraversel {
 		}
 	}
 
-	public static <E> void inorderTraverselWithoutRecursion(TreeNode<E> root) {
-		System.out.println("inorderTraverselWithoutRecursion :");
+	public static <E> void inorderTraversalWithoutRecursion(TreeNode<E> root) {
+		System.out.println("inorderTraversalWithoutRecursion :");
 		if (root == null)
 			return;
 		Stack<TreeNode<E>> stack = new Stack<TreeNode<E>>();
