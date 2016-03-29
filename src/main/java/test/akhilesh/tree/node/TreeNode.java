@@ -1,5 +1,6 @@
 package test.akhilesh.tree.node;
 
+//Node for storing the tree Data
 public class TreeNode<E> {
 
 	E data;

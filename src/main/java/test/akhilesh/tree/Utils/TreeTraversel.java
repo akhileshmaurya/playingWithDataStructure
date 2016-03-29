@@ -93,7 +93,9 @@ public class TreeTraversel {
 		}
 		System.out.println();
 	}
-
+	
+	
+	//For inorder traversal Adding all left node to stack
 	private static <E> void pushAllLeftToStack(Stack<TreeNode<E>> stack, TreeNode<E> temp) {
 		while (temp != null) {
 			stack.push(temp);
