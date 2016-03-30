@@ -93,9 +93,8 @@ public class TreeTraversal {
 		}
 		System.out.println();
 	}
-	
-	
-	//For inorder traversal Adding all left node to stack
+
+	// For inOrder traversal Adding all left node to stack
 	private static <E> void pushAllLeftToStack(Stack<TreeNode<E>> stack, TreeNode<E> temp) {
 		while (temp != null) {
 			stack.push(temp);
@@ -104,4 +103,16 @@ public class TreeTraversal {
 
 	}
 
+	public static <E> void traverseLikeAsTree(TreeNode<E> root) {
+		int height = TreeUtils.getHeight(root);
+		//todo: make a logic for traversing tree
+
+	}
+
+	private static void printSpaces(int n) {
+		for (int i = 0; i < n; i++) {
+			System.out.print(" ");
+		}
+
+	}
 }
