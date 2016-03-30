@@ -42,8 +42,17 @@ public class TreeUtils {
 	public static TreeNode<Integer> makeSampleBinaryTreeWIthSizeN(int n) {
 		Integer[] input = new Integer[n];
 		for (int i = 1; i <= n; i++) {
-			input[i-1] = i;
+			input[i - 1] = i;
 		}
 		return makeTreeWithGivenArray(input);
+	}
+
+	public static <E> int getHeight(TreeNode<E> root) {
+		if (root == null)
+			return 0;
+		int h1 = getHeight(root.getLeftChild());
+		int h2 = getHeight(root.getRightChild());
+		return (h1 >= h2 ? h1 : h2) + 1;
+
 	}
 }
