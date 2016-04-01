@@ -55,4 +55,23 @@ public class TreeUtils {
 		return (h1 >= h2 ? h1 : h2) + 1;
 
 	}
+
+	public static <E> int diameterOfTree(TreeNode<E> root) {
+		return diameter(root);
+
+	}
+
+	private static <E> int diameter(TreeNode<E> root) {
+		if (root == null)
+			return 0;
+		int h1 = getHeight(root.getLeftChild());
+		int h2 = getHeight(root.getRightChild());
+		int d1 = diameter(root.getLeftChild());
+		int d2 = diameter(root.getRightChild());
+		return Math.max(h1 + h2 + 1, Math.max(d1, d2));
+	}
+	public static <E> int diameterOfTreeWithoutRecursion(TreeNode<E> root) {
+		
+       return 0;
+	}
 }

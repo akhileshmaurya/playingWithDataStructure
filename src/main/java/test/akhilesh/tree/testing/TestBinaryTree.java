@@ -10,9 +10,9 @@ public class TestBinaryTree {
 		TreeNode<Integer> root = TreeUtils.makeSampleBinaryTreeWIthSizeN(20);
 		TreeTraversal.inOrderTraversal(root);
 		TreeTraversal.preOrderTraversal(root);
-		TreeTraversal.postOrderTraversal(root);
+		/*TreeTraversal.postOrderTraversal(root);
 		TreeTraversal.levelOrderTraversal(root);
-		TreeTraversal.inorderTraversalWithoutRecursion(root);
+		TreeTraversal.inorderTraversalWithoutRecursion(root);*/
 	}
 
 }
