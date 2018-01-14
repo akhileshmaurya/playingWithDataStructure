@@ -1,2 +1,1 @@
-# playingWithDataStructure
-Some Random use cases of multiple data structure
+# Some Examples for predifind datastructure and Algorithems
